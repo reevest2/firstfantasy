@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class HealthBar : MonoBehaviour
     public void Start()
     {
         slider.enabled = true;
-        SetHealth(80, 100);
+        SetHealth(1000, 1000);
     }
 
     public void SetHealth(float hp, float maxhp)
@@ -23,6 +24,11 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
+        slider.value--;
 
+        if (slider.value <= 0)
+        {
+            Destroy(transform.parent.parent.gameObject);
+        }
     }
 }
