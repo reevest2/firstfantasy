@@ -960,7 +960,7 @@ GameObject:
   - component: {fileID: 1015281847}
   - component: {fileID: 1015281848}
   m_Layer: 0
-  m_Name: textbox
+  m_Name: BattleHud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
